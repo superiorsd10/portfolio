@@ -1,0 +1,38 @@
+import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
+import { BackgroundGradient } from "/components/ui/background-gradient.tsx"
+import Link from 'next/link';
+
+# contact me 📱
+
+Let's Connect and Innovate Together!
+
+As a versatile software developer with experience in mobile and backend development, UI/UX design, and open-source contributions, I'm ready to collaborate on exciting projects. **Open for opportunities!**
+
+<br></br>
+
+<div className="flex justify-center pt-12">
+    <div className="inline-block">
+        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+            <p className="text-center pt-10 font-medium">🚀 Let's build something amazing! 🚀</p>
+            <p className="text-center pt-12 font-bold">Connect with Me</p>
+
+            <div className="flex justify-center pt-6">
+                <Link href={"https://www.linkedin.com/in/sachin-dapkara/"}><FaLinkedinIn className="mr-3" size={30} /></Link>
+                <Link href={"https://x.com/superior_sd10"}><FaXTwitter className="mr-3" size={30} /></Link>
+                <Link href={"https://github.com/superiorsd10"}><FaGithub className="mr-3" size={30} /></Link>
+                <Link href={"https://www.instagram.com/superiorsd10/"}><FaInstagram size={30} className="mr-3" /></Link>
+                <Link href={"https://leetcode.com/superiorsd10/"}><SiLeetcode size={30} /></Link>
+            </div>
+
+            <p className="text-center pt-12 font-medium">📧 Don't hesitate to shoot me an email</p>
+
+            <div className="flex justify-center pt-6 pb-8">
+                <button className="shadow-[0_0_0_1px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+                <a href="mailto:sachindapkara6@gmail.com">Get in Touch</a>
+                </button>
+            </div>
+        </BackgroundGradient>
+    </div>
+</div>
