@@ -2,5 +2,21 @@
   "index": {
     "title": "Home", 
     "type": "page"
+  }, 
+  "projects": {
+    "title": "Projects", 
+    "type": "page"
+  }, 
+  "blogs": {
+    "title": "Blogs", 
+    "type": "page"
+  }, 
+  "logs": {
+    "title": "Logs", 
+    "type": "page"
+  }, 
+  "contact": {
+    "title": "Contact", 
+    "type": "page"
   }
 }
