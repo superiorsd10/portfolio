@@ -1,5 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import footer from './components/ui/footer'
 
 const config: DocsThemeConfig = {
   logo: <span><strong>superiorsd10</strong></span>,
@@ -11,7 +12,7 @@ const config: DocsThemeConfig = {
     placeholder: "Search..."
   },
   footer: {
-    text: 'Sachin Dapkara',
+    text: footer,
   },
 }
 
