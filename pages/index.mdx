@@ -1,9 +1,11 @@
 import { MacbookScroll } from "../components/ui/macbook-scroll";
 import { HeroParallax } from "../components/ui/hero-parallax";
+import Link from "next/link";
+import Image from "next/image";
 
 <div className="preview flex min-h-[350px] w-full justify-center p-2 sm:p-10 items-center">
     <div className="overflow-hidden dark:bg-[#111111] bg-white w-full">
-        <MacbookScroll title="welcome to my realm 🌟" src="/images/portfolio.webp"></MacbookScroll>
+        <MacbookScroll title="welcome to my realm 🌟" src="/images/portfolio.webp" badge={<Link href="https://drive.google.com/file/d/1OhoTK8ruM6mVpK_Rs3NQ5bUP-1XeQyN5/view?usp=sharing"><Image src="/images/resume.svg" alt="resume icon" unoptimized height={50} width={50}/></Link>}></MacbookScroll>
     </div>
 </div>
 
