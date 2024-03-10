@@ -10,6 +10,7 @@ module.exports = {
         "./pages/**/*.{js,ts,tsx,md,mdx}",
         "./components/**/*.{ts,tsx,md,mdx}",
         "./theme.config.tsx",
+        "./utils/**/*.{js,ts,tsx,md,mdx}"
     ],
     darkMode: "class",
     theme: {},

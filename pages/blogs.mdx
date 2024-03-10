@@ -1,5 +1,18 @@
+import { BentoGrid, BentoGridItem } from "/components/ui/bento-grid.tsx";
+import { blogItems } from "/utils/blog_items.ts"
+import Link from 'next/link'
+
 # blogs 📝
 
-```ts
-console.log("coming soon...");
-```
+<BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem] mt-10">
+      {blogItems.map((item, i) => (
+        <Link href={item.link}>
+            <BentoGridItem
+                key={i}
+                title={item.title}
+                description={item.description}
+                className={item.className}
+            />
+        </Link>
+      ))}
+</BentoGrid>
