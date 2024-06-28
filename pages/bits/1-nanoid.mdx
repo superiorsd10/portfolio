@@ -1,1 +1,48 @@
-# 1. nanoid
+import Link from 'next/link';
+
+# nanoid
+
+<a href="https://github.com/ai/nanoid" class="hover:underline text-blue-400">nanoid</a> is a tiny, secure, URL-friendly, unique string ID generator
+
+<br></br>
+
+**key features:**
+
+- typically shorter than UUIDs, making them more suitable for env where space is concern
+- optimized for speed, excellent choice for performance-critical applications
+- uses a secure random number generator ensuring uniqueness and unpredictability
+
+<br></br>
+
+**how does it work?**
+
+- it first generates a series of random bytes
+- they are then encoded into a URL-friendly format, by default it uses a base64-like encoding with a custom alphabet
+- the encoded string is truncated or padded to the desired length, resulting in a unique ID
+
+<br></br>
+
+**pros:**
+
+- it's significantly shorter than UUIDs (36 characters long including hyphens) which is helpful for saving storage space
+and reducing payload sizes in APIs leading to improved performance
+- generating nanoid IDs is faster than generating UUIDs particularly when using custom alphabets and shorter lengths
+these benefits are more pronouned in high-throughput systems where large numbers of IDs are generated frequently
+- use of secure RNGs ensures that the generated IDs are both unique and unpredictable
+- can customize the length and alphabet of IDs
+
+<br></br>
+
+**cons:**
+
+- compatibility issues with older browsers that do not support the web crypto API
+- newer and less standardized solution
+- need to carefully consider the probability of collisions based on the length of generated IDs
+
+<br></br>
+
+**use cases:**
+
+- URL shortening
+- database keys
+- API tokens and session IDs
