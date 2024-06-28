@@ -25,6 +25,10 @@ const config: DocsThemeConfig = {
   footer: {
     text: footer,
   },
+  navigation: {
+    prev: false,
+    next: false
+  }
 }
 
 export default config
