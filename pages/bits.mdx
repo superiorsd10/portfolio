@@ -1,1 +1,14 @@
-# bits
+import { bitsItems } from '/utils/bits_items.ts';
+import Link from 'next/link';
+
+# bits ⁰¹
+
+<div className='pt-10 flex flex-col space-y-2'>
+    {
+        bitsItems.map((item, i) => (
+            <Link href={item.link} className='hover:underline hover:text-blue-500'>
+                {item.title}
+            </Link>
+        ))
+    }
+</div>

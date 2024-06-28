@@ -13,7 +13,11 @@
   }, 
   "bits": {
     "title": "bits", 
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "toc": false,
+      "sidebar": false
+    }
   }, 
   "contact": {
     "title": "contact", 
