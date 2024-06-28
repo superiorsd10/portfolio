@@ -1,0 +1,51 @@
+import Image from 'next/image'
+
+# connection pooling
+
+it is a practice of maintaining a cache of reusable database connection, so instead of opening and closing connection repeatedly, we can reuse the existing ones only.
+
+<br></br>
+
+**how connection pooling works?**
+
+<div className="flex justify-center mt-4">
+  <Image src="/images/bits/10-connection-pooling/connection-pooling.webp" unoptimized width={800} height={500} className="mt-4"/>
+</div>
+
+<br></br>
+
+1. **initialization:** a pool of database connections is created and maintained when the application starts
+
+2. **borrowing:** whenever application needs a database connection for performing some operations, it borrows a connection from connection pool
+
+3. **returning:** once the application is done with operations, it returns the borrowed connection back to the pool
+
+<br></br>
+
+**key components**
+
+- **connection pool manager:** it manages the lifecycle of connections including creation, borrowing, and returning
+
+- **connections:** actual database connections that are maintained in the pool
+
+<br></br>
+
+**pros**
+
+- reduces the time and resources needed to establish connections thereby increasing performance
+
+- limits the number of simultaneous database connections, preventing resource exhaustion
+
+- supports higher loads and improves application scalability
+
+<br></br>
+
+**best practices**
+
+- the pool size must be configured based on the application load and database capacity
+
+- the pool usage should be regularly monitored to identify and resolve bottlenecks
+
+- it should be ensured that the borrowed connections are returned to the pool to avoid leaks and resource exhaustion
+
+<br></br>
