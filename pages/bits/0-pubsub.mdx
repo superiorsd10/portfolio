@@ -1,1 +1,43 @@
+import Image from 'next/image'
+
 # pubsub
+
+<div className="flex justify-center mt-4">
+  <Image src="/images/bits/0-pubsub/pubsub.webp" unoptimized width={800} height={500} className="mt-4"/>
+</div>
+<br></br>
+**different level of message guarantees:**
+
+- at-least-once delivery (may be duplicated)
+- at-most-once delivery (may not be delivered at all)
+- exactly-once delivery (eliminates duplicates and ensures delivery)
+
+<br></br>
+
+**messages in a pub-sub system can be of various formats, such as**
+
+- JSON
+- XML
+- binary
+- avro
+- protobuf
+
+<br></br>
+
+**message broker architecture:**
+
+- they can be clustered for high avaliability and scalability
+- messages are stored in
+    - memory
+    - on disk
+    - distributed storage system
+- messages can be replicated across nodes to ensure durability
+- topics can be partitioned to distribute the load across multiple nodes
+- offset management tracks which messages have been consumed to
+ensure correct delivery
+
+<br></br>
+
+we can persist messages in a durable store that allows subscribers to receive messages even if they are offline when the messages are published, once they come online, they can recieve the persisted messages
+
+apache kafka, rabbitmq, aws sns are some of the other message brokers
