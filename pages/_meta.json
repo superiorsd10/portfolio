@@ -1,22 +1,22 @@
 {
   "index": {
-    "title": "Home", 
+    "title": "home", 
     "type": "page"
   }, 
   "projects": {
-    "title": "Projects", 
+    "title": "projects", 
     "type": "page"
   }, 
   "blogs": {
-    "title": "Blogs", 
+    "title": "blogs", 
     "type": "page"
   }, 
   "logs": {
-    "title": "Logs", 
+    "title": "logs", 
     "type": "page"
   }, 
   "contact": {
-    "title": "Contact", 
+    "title": "contact", 
     "type": "page"
   }
 }
