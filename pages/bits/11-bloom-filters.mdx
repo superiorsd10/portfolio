@@ -1,0 +1,55 @@
+import Image from 'next/image'
+
+# bloom filters in web caching
+
+while implementing web caching one of our key goal is optimizing the performance and one effective tool for this purpose is bloom filters
+
+<br></br>
+
+**what are bloom filters?**
+
+a bloom filter is a space-efficient, probabilistic data structure used to test whether an element is a member of a set 
+
+when checked it can return false positives but never false negatives, it means that a bloom filter can definitely say an element is not in a set but can only say an element might be in a set or might not be 
+
+<br></br>
+
+**key properties**
+
+- uses less memory compared to other data structures
+- both insertions and queries are performed in constant time
+
+<br></br>
+
+**how bloom filters improve web cache performance?**
+
+web caching means storing copies of resources to serve future requests faster, let's see how bloom filters improves web cache performance
+
+- they quickly checks if a resource might be in the cache before accessing the disk resulting in lesser disk reads
+
+- faster lookups lead to reduced response times for cache hits
+
+- optimizes memory and processing power usage by reducing the load on caching mechanisms
+
+<br></br>
+
+**practical implementation in CDNs and browser caching**
+
+<div className="flex justify-center mt-4">
+  <Image src="/images/bits/11-bloom-filters/bloom-filters.webp" unoptimized width={800} height={500} className="mt-4"/>
+</div>
+
+- **CDNs**
+
+    they can be used to manage the cache at edge servers
+
+    - when the client makes a request, the edge server uses a bloom filter to check if the request resource might be in the cache
+
+    - if the bloom filter returns a positive result, the server then checks the cache
+
+        - if hits, the resource is served from the cache
+        - if miss, the resource is fetched from the origin server and then stored in the cache
+
+    - the bloom filter is updated to include the new resource
+
+similarly it can be used to manage the local cache as well

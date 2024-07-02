@@ -5,6 +5,10 @@ interface BitsItem {
 
 export const bitsItems: BitsItem[] = [
     {
+        title: '11. bloom filters in web caching',
+        link: '/bits/11-bloom-filters'
+    },
+    {
         title: '10. connection pooling',
         link: '/bits/10-connection-pooling'
     },
