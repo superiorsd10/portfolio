@@ -1,8 +1,24 @@
-import { IconNotebook, IconClock, IconPencil, IconRobot, IconDeviceGamepad, IconFrame, IconActivity, IconApple, IconCheckbox } from "@tabler/icons-react"
+import { IconNotebook, IconClock, IconPencil, IconRobot, IconDeviceGamepad, IconFrame, IconActivity, IconApple, IconCheckbox, IconCloudLock } from "@tabler/icons-react"
 import  cn  from "../utils/cn";
 import React from "react";
 
 export const projectItems = [
+    {
+        title: "psst",
+        description: "Secure pastebin: encrypted storage, dynamic access, and tracking.",
+        header: <img src="/images/psst.webp" className="rounded-sm"></img>,
+        className: "md:col-span-1",
+        icon: <IconCloudLock className="h-4 w-4 text-neutral-500" />,
+        link: "https://github.com/superiorsd10/psst",
+    },
+    {
+        title: "AI vs Human",
+        description: "AI vs Human: Classify text with machine learning insights.",
+        header: <img src="/images/ai-human.webp" className="rounded-sm"></img>,
+        className: "md:col-span-1",
+        icon: <IconActivity className="h-4 w-4 text-neutral-500" />,
+        link: "https://github.com/superiorsd10/ai-or-human-ml-model",
+    },
     {
         title: "EduHub-AI",
         description: "Revolutionizing education with AI, enhancing learning seamlessly.",
